@@ -7,6 +7,27 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-function palindrome(str) {}
+// method 1
+// function palindrome(str) {
+//   const reversed = str.split('').reverse().join('');
+//   return reversed === str;
+// }
+
+// method 2
+// function palindrome(str) {
+//   let reversed = '';
+//   for(let char of str) {
+//     reversed = char + reversed;
+//   }
+//   return reversed === str;
+// }
+
+// method 3
+// map returns new array but every returns Boolean i.e true or false
+function palindrome(str) {
+  return str.split('').every((char, i) => {
+    return char === str[str.length -i -1];
+  });
+}
 
 module.exports = palindrome;
