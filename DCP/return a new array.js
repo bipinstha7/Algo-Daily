@@ -14,10 +14,10 @@ const multipleOfArray = (arr) => {
     let number = mul / arr[j];
     newArray.push(number);
   }
-  console.log("mul:", mul);
-  console.log("new array:", newArray);
+  return newArray;
 }
 
 const array = [1,2,3,4,5];
 // const array = [3, 2, 1];
-multipleOfArray(array);
+const result = multipleOfArray(array);
+console.log(result);
