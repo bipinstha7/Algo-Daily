@@ -11,14 +11,14 @@ const add = (arr, k) => {
     for (let j = i + 1; j < arr.length; j++) {
       let second = arr[j];
       if (first + second === k) {
-        console.log("true");
-        return;
+        return true;
       }
     }
   }
-  console.log("false");
+  return false;
 };
 
 const array = [10, 15, 3, 7];
 const k = 17;
-add(array, k);
+const result = add(array, k);
+console.log(result);
