@@ -7,8 +7,9 @@
 
 function numberOfWaysToDecodeMessage(msg) {
   const message = msg.split('');
+  const inValidMessage = 'inValid Message !!!'
   if (message[0] === '0') {
-    return console.log('Invalid Message');
+    return inValidMessage;
   }
 
   let count = 1;  
@@ -19,10 +20,8 @@ function numberOfWaysToDecodeMessage(msg) {
       // console.log(msg.substring(i, i+2));
     }
   }
-  console.log(count);
+  return count;
 }
 
-numberOfWaysToDecodeMessage('123');
-// 1 2 3 
-// 1 23
-// 12 3
+const result = numberOfWaysToDecodeMessage('123');
+console.log(result);
