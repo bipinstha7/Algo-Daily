@@ -8,10 +8,10 @@ const findLowestPositiveNumber = (arr) => {
   
   for(let i = 1; i <= max; i++) {
     if (!arr.includes(i)) {
-      return console.log(i);
+      return i;
     }
     if(i === max) {
-      return console.log(max + 1);
+      return (max + 1);
     }
   }
 
@@ -19,4 +19,5 @@ const findLowestPositiveNumber = (arr) => {
 
 // const arr = [1, 2, 0];
 const arr = [3, 4, -1, 1]
-findLowestPositiveNumber(arr);
+const result = findLowestPositiveNumber(arr);
+console.log(result);
