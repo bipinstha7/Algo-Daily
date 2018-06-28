@@ -11,9 +11,10 @@ const largestSumOfNonadjacentNumbers = (arr) => {
     include = exclude + arr[i];
     exclude = sum;
   }
-  console.log(include > exclude ? include : exclude);
+  return (include > exclude ? include : exclude);
 }
 
 // const array = [2, 4, 6, 2, 5];
 const array = [5, 1, 1, 5];
-largestSumOfNonadjacentNumbers(array);
+const result = largestSumOfNonadjacentNumbers(array);
+console.log(result);
