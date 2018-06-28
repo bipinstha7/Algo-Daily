@@ -4,11 +4,18 @@
 
 
 const returnMatchedString = (arr, match) => {
+  // let matchedWord = [];
+  let matchedWord = '';
   arr.map(word => {
-    if(word.includes(match)) return console.log(word);
-  })
+    if(word.includes(match)) {
+      // matchedWord.push(word);
+      matchedWord += `${word} `;
+    }
+  });
+  return matchedWord;
 }
 
 const array = ['dog', 'deer', 'deal'];
 const match = 'de';
-returnMatchedString(array, match);
+const result = returnMatchedString(array, match);
+console.log(result);
