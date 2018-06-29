@@ -2,9 +2,29 @@
 
 // For example, the input [3, 4, -1, 1] should give 2. The input [1, 2, 0] should give 3.
 
+// const findLowestPositiveNumber = (arr) => {
+//   const max = Math.max(...arr);
+//   // const sortArray = arr.sort();
+  
+//   for(let i = 1; i <= max; i++) {
+//     if (!arr.includes(i)) {
+//       return i;
+//     }
+//     if(i === max) {
+//       return (max + 1);
+//     }
+//   }
+
+// }
+
+// const arr = [1, 2, 0];
+// const arr = [3, 4, -1, 1]
+// const result = findLowestPositiveNumber(arr);
+// console.log(result);
+
+// TEST WITH JEST
 const findLowestPositiveNumber = (arr) => {
   const max = Math.max(...arr);
-  // const sortArray = arr.sort();
   
   for(let i = 1; i <= max; i++) {
     if (!arr.includes(i)) {
@@ -14,10 +34,6 @@ const findLowestPositiveNumber = (arr) => {
       return (max + 1);
     }
   }
+};
 
-}
-
-// const arr = [1, 2, 0];
-const arr = [3, 4, -1, 1]
-const result = findLowestPositiveNumber(arr);
-console.log(result);
+module.exports = {find: findLowestPositiveNumber};
