@@ -1,0 +1,14 @@
+{
+  "name": "dcp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "author": "bipin",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^23.2.0"
+  }
+}
