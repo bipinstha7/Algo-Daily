@@ -17,19 +17,32 @@
 // const ways = numberOfWaysToClimbTheStaircase(N);
 // console.log(ways);
 
-// What if, instead of being able to climb 1 or 2 steps at a time, you could climb any number from a set of positive integers X? For example, if X = {1, 3, 5}, you could climb 1, 3, or 5 steps at a time.
-
-const numberOfWaysToClimbTheStaircase2 = (N) => {
-  if (N === 0) return 1;
-  let total = 0;
-  for(let step of [1, 3, 5]) {
-    if ((N - step) >= 0) {
-      total += numberOfWaysToClimbTheStaircase2(N - step);
-    } 
-  }
-  return total;
+// TEST WITH JEST
+const numberOfWaysToClimbTheStaircase = N => {
+  if (N === 0 || N === 1) return 1;
+  return (
+    numberOfWaysToClimbTheStaircase(N - 1) +
+    numberOfWaysToClimbTheStaircase(N - 2)
+  );
 };
 
-const N = 4;
-const ways = numberOfWaysToClimbTheStaircase2(N);
-console.log(ways);
+module.exports = { staircase: numberOfWaysToClimbTheStaircase };
+
+// What if, instead of being able to climb 1 or 2 steps at a time, you could climb any number from a set of positive integers X? For example, if X = {1, 3, 5}, you could climb 1, 3, or 5 steps at a time.
+
+// const numberOfWaysToClimbTheStaircase2 = (N) => {
+//   if (N === 0) return 1;
+//   let total = 0;
+//   for(let step of [1, 3, 5]) {
+//     if ((N - step) >= 0) {
+//       total += numberOfWaysToClimbTheStaircase2(N - step);
+//     }
+//   }
+//   return total;
+// };
+
+// const N = 4;
+// const ways = numberOfWaysToClimbTheStaircase2(N);
+// console.log(ways);
+
+
