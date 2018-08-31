@@ -17,7 +17,7 @@
 //       '### '
 //       '####'
 
-function steps(n) {
+function steps(just checking the commit) {
   for(let row = 0; row < n; row++) {
     let result = '';
     for(col = 0; col < n; col++) {
