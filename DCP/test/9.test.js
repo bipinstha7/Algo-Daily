@@ -7,5 +7,6 @@ describe('9.return matched string', () => {
         const returnedArray = autoComplete(prefix, givenArray)
 
         expect(returnedArray).toEqual(expect.arrayContaining(['deep', 'deal', 'dear']))
+        expect(returnedArray).toEqual(expect.not.arrayContaining(['dog']))
     })
 })
