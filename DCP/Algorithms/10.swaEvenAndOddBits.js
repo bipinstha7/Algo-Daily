@@ -12,11 +12,12 @@ function swapEvenAndOddBits(bits) {
             newBits.push(changedBits[i - 1])
         }
     }
-    return newBits.join('')
+    let result = newBits.join('')
+    return result
 }
 
 module.exports = swapEvenAndOddBits
 
-// let bits = 10101010
-// const newBits = swapEvenAndOddBits(bits)
-// console.log('newBits', newBits)
+let bits = 10101010
+const newBits = swapEvenAndOddBits(bits)
+console.log('newBits', newBits)
