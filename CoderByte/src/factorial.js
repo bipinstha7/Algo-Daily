@@ -5,6 +5,7 @@
  * For example: if num = 4, then your program should return (4 * 3 * 2 * 1) = 24.
  */
 
+ // METHOD 1
  function firstFactorial(num) {
     let factorial = 1
     for (let i = 1; i <= num; i++) {
