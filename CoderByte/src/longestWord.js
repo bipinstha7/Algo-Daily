@@ -1,5 +1,5 @@
 /**
- * Have the function LongestWord(sen) 
+ * Have the function longestWord(sen) 
  * take the sen parameter being passed and 
  * return the largest word in the string. 
  * If there are two or more words that are the same length, 
@@ -12,3 +12,16 @@
  * Input:"I love dogs"
  * Output:"love"
  */
+
+ function longestWord(sen) {
+    const senInArray = sen.split(' ')
+    const lengths = senInArray.map(arr => arr.length)
+    const maxLength = Math.max(...lengths)
+    const result = senInArray.filter(arr => arr.length === maxLength)
+    
+    return result[0]
+ }
+
+// console.log(longestWord('I love dogs'))
+
+module.exports = longestWord
