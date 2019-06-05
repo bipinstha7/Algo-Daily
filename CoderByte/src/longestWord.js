@@ -14,14 +14,14 @@
  */
 
  function longestWord(sen) {
-    const senInArray = sen.split(' ')
+    const senWithoutPunctuation = sen.replace(/[^a-zA-Zsd]/g, ' ')
+    console.log(senWithoutPunctuation)
+    const senInArray = senWithoutPunctuation.split(' ')
     const lengths = senInArray.map(arr => arr.length)
     const maxLength = Math.max(...lengths)
     const result = senInArray.filter(arr => arr.length === maxLength)
     
     return result[0]
  }
-
-// console.log(longestWord('I love dogs'))
 
 module.exports = longestWord
