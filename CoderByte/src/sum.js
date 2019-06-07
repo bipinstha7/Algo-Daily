@@ -19,4 +19,4 @@ function simpleAdding(num) {
 	return sum
 }
 
-console.log(simpleAdding(140))
+module.exports = simpleAdding
