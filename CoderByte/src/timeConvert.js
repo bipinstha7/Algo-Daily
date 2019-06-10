@@ -12,10 +12,6 @@
  */
 
 function timeConvert(num) {
-	if (num < 60) {
-		return `0:${num}`
-	}
-
 	const hour = Math.floor(num / 60)
 	const minutes = num % 60
 
